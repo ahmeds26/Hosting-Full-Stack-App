@@ -27,6 +27,10 @@ jobs:
           command: |
             sudo pip install awsebcli
       - run:
+          name: Install AWS CLI
+          command: |
+            sudo pip install awscli
+      - run:
           name: Front-End Install
           command: |
             npm run frontend:install
