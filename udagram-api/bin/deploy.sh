@@ -1,1 +1,1 @@
-eb init --profile default && eb use udaapi-env && eb deploy
+eb use udaapi-env && eb deploy
