@@ -13,6 +13,8 @@ jobs:
     docker:
       # the base image can run most needed actions with orbs
       - image: "cimg/base:stable"
+      - environment:
+          OPENSSL_CONF=/
     steps:
       - node/install
       - checkout
