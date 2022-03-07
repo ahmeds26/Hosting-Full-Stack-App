@@ -8,11 +8,25 @@ orbs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 
+workflows:
+  deploy:
+    jobs:
+      - build
+          filters:
+            branches:
+              only: 
+                - main
+                - master
 jobs:
   build:
     docker:
       # the base image can run most needed actions with orbs
       - image: "cimg/base:stable"
+    filters:
+      branches:
+        only: 
+          - main
+          - master
     steps:
       - node/install
       - checkout
