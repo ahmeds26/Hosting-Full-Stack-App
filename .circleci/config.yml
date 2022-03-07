@@ -13,11 +13,11 @@ workflows:
   build_deploy:
     jobs:
       - build
-        filters:
-          branches:
-            only:
-              - master
-              - main
+          filters:
+            branches:
+              only:
+                - master
+                - main
 
 jobs:
   build:
